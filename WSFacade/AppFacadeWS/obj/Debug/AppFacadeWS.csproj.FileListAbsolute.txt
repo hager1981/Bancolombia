@@ -1,0 +1,22 @@
+C:\Users\DuverM\Documents\Visual Studio 2010\Projects\AppFacadeWS\AppFacadeWS\bin\AppFacadeWS.dll
+C:\Users\DuverM\Documents\Visual Studio 2010\Projects\AppFacadeWS\AppFacadeWS\bin\AppFacadeWS.pdb
+C:\Users\DuverM\Documents\Visual Studio 2010\Projects\AppFacadeWS\AppFacadeWS\obj\Debug\AppFacadeWS.csprojResolveAssemblyReference.cache
+C:\Users\DuverM\Documents\Visual Studio 2010\Projects\AppFacadeWS\AppFacadeWS\obj\Debug\AppFacadeWS.dll
+C:\Users\DuverM\Documents\Visual Studio 2010\Projects\AppFacadeWS\AppFacadeWS\obj\Debug\AppFacadeWS.pdb
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS\bin\AppFacadeWS.dll
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS\bin\AppFacadeWS.pdb
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS\obj\Debug\AppFacadeWS.csprojResolveAssemblyReference.cache
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS\obj\Debug\AppFacadeWS.dll
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS\obj\Debug\AppFacadeWS.pdb
+C:\Fachade\AppFacadeWS\bin\AppFacadeWS.dll.config
+C:\Fachade\AppFacadeWS\bin\AppFacadeWS.dll
+C:\Fachade\AppFacadeWS\bin\AppFacadeWS.pdb
+C:\Fachade\AppFacadeWS\obj\Debug\AppFacadeWS.csprojResolveAssemblyReference.cache
+C:\Fachade\AppFacadeWS\obj\Debug\AppFacadeWS.dll
+C:\Fachade\AppFacadeWS\obj\Debug\AppFacadeWS.pdb
+C:\Visual Studio\WSFacade\AppFacadeWS\bin\AppFacadeWS.dll.config
+C:\Visual Studio\WSFacade\AppFacadeWS\bin\AppFacadeWS.dll
+C:\Visual Studio\WSFacade\AppFacadeWS\bin\AppFacadeWS.pdb
+C:\Visual Studio\WSFacade\AppFacadeWS\obj\Debug\AppFacadeWS.csprojResolveAssemblyReference.cache
+C:\Visual Studio\WSFacade\AppFacadeWS\obj\Debug\AppFacadeWS.dll
+C:\Visual Studio\WSFacade\AppFacadeWS\obj\Debug\AppFacadeWS.pdb

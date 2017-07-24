@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:bons0="http://grupobancolombia.com/ents/Participante/Demografica/EstadoCivil/V3.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/ents/Participante/Demografica/EstadoCivil/V3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="EstadoCivil">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="1" />
+      <xsd:pattern value="\d" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

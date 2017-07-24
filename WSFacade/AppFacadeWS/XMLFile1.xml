@@ -1,0 +1,26 @@
+﻿<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <h:requestHeader xmlns:h="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" xmlns="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <systemId xmlns="">xxxx</systemId>
+      <messageId xmlns="">xxxx</messageId>
+      <userId xmlns="">
+        <userName>xxxx</userName>
+      </userId>
+      <destination xmlns="">
+        <name>xx</name>
+        <namespace>xxxx</namespace>
+        <operation>xxxx</operation>
+      </destination>
+    </h:requestHeader>
+  </s:Header>
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <consultarEstadoClienteListasControl xmlns="http://grupobancolombia.com/intf/ServiciosApoyo/PrevencionLavadoActivos/ConsultarEstadoClienteListasControl/V1.0">
+      <identidadCliente xmlns="">
+        <tipoDocumento>xxxxxxxxxxx</tipoDocumento>
+        <numeroDocumento>xxxxxxxx</numeroDocumento>
+        <nombreCompleto>1</nombreCompleto>
+      </identidadCliente>
+    </consultarEstadoClienteListasControl>
+  </s:Body>
+</s:Envelope>
+

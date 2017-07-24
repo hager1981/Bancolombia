@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Fachade\Deploy11</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AppFacadeWS11.dll">
+      <publishTime>07/19/2017 09:39:43</publishTime>
+    </File>
+    <File Include="FacadeService11.asmx">
+      <publishTime>06/14/2017 11:32:21</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteHUB/AppFacadeWS11.RecuperarDatosClienteHUB.InformacionUbicacionCliente.datasource">
+      <publishTime>07/07/2017 15:10:15</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteHUB/AppFacadeWS11.RecuperarDatosClienteHUB.RecuperarDatosBasicosClienteResponse.datasource">
+      <publishTime>07/07/2017 15:10:15</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteHUB/AppFacadeWS11.RecuperarDatosClienteHUB.RecuperarDatosFinancierosClienteResponse.datasource">
+      <publishTime>07/07/2017 15:10:15</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteHUB/AppFacadeWS11.RecuperarDatosClienteHUB.RecuperarDatosPersonalesClienteResponse.datasource">
+      <publishTime>07/07/2017 15:10:15</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteHUB/AppFacadeWS11.RecuperarDatosClienteHUB.ResponseHeader.datasource">
+      <publishTime>07/07/2017 15:10:15</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteMDM/AppFacadeWS11.RecuperarDatosClienteMDM.InformacionUbicacionCliente.datasource">
+      <publishTime>06/21/2017 16:39:35</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteMDM/AppFacadeWS11.RecuperarDatosClienteMDM.RecuperarDatosBasicosClienteResponse.datasource">
+      <publishTime>06/21/2017 16:39:35</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteMDM/AppFacadeWS11.RecuperarDatosClienteMDM.RecuperarDatosFinancierosClienteResponse.datasource">
+      <publishTime>06/21/2017 16:39:35</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteMDM/AppFacadeWS11.RecuperarDatosClienteMDM.RecuperarDatosPersonalesClienteResponse.datasource">
+      <publishTime>06/21/2017 16:39:35</publishTime>
+    </File>
+    <File Include="Service References/RecuperarDatosClienteMDM/AppFacadeWS11.RecuperarDatosClienteMDM.ResponseHeader.datasource">
+      <publishTime>06/21/2017 16:39:35</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/11/2017 08:14:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

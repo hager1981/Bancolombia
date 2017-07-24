@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/Enlace/V1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GestionarProspecto" targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/Enlace/V1.1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1" location="mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=GestionarProspecto_Intf_V1.1.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="GestionarProspectoHttpBinding" type="ns:GestionarProspecto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="crearPersonaNatural">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1/crearPersonaNatural" />
+      <wsdl:input name="crearPersonaNaturalRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:crearPersonaNaturalRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="crearPersonaNaturalResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:crearPersonaNaturalResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="crmBusinessException">
+        <soap:fault use="literal" name="crmBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="crearPersonaJuridica">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1/crearPersonaJuridica" />
+      <wsdl:input name="crearPersonaJuridicaRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:crearPersonaJuridicaRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="crearPersonaJuridicaResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:crearPersonaJuridicaResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="crmBusinessException">
+        <soap:fault use="literal" name="crmBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarPersonaNatural">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1/modificarPersonaNatural" />
+      <wsdl:input name="modificarPersonaNaturalRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:modificarPersonaNaturalRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modificarPersonaNaturalResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:modificarPersonaNaturalResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="crmBusinessException">
+        <soap:fault use="literal" name="crmBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarPersonaJuridica">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1/modificarPersonaJuridica" />
+      <wsdl:input name="modificarPersonaJuridicaRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:modificarPersonaJuridicaRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modificarPersonaJuridicaResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:modificarPersonaJuridicaResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="crmBusinessException">
+        <soap:fault use="literal" name="crmBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GestionarProspecto">
+    <wsdl:port name="GestionarProspectoHttpPort" binding="tns:GestionarProspectoHttpBinding">
+      <soap:address location="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

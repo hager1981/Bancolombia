@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1" xmlns:mf="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" name="GestionarProspecto" targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/GestionarProspecto/V1.1">
+      <xsd:include schemaLocation="mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=GestionarProspecto_V1.1.xsd" />
+      <xsd:import schemaLocation="mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" namespace="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="crearPersonaNaturalRequestMsg">
+    <wsdl:part name="parameters" element="tns:crearPersonaNatural" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="crearPersonaNaturalResponseMsg">
+    <wsdl:part name="result" element="tns:crearPersonaNaturalResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="crearPersonaJuridicaRequestMsg">
+    <wsdl:part name="parameters" element="tns:crearPersonaJuridica" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="crearPersonaJuridicaResponseMsg">
+    <wsdl:part name="result" element="tns:crearPersonaJuridicaResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="modificarPersonaNaturalRequestMsg">
+    <wsdl:part name="parameters" element="tns:modificarPersonaNatural" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="modificarPersonaNaturalResponseMsg">
+    <wsdl:part name="result" element="tns:modificarPersonaNaturalResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="modificarPersonaJuridicaRequestMsg">
+    <wsdl:part name="parameters" element="tns:modificarPersonaJuridica" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="modificarPersonaJuridicaResponseMsg">
+    <wsdl:part name="result" element="tns:modificarPersonaJuridicaResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="systemExceptionMsg">
+    <wsdl:part name="parameters" element="tns:systemException" />
+  </wsdl:message>
+  <wsdl:message name="crmBusinessExceptionMsg">
+    <wsdl:part name="parameters" element="tns:crmBusinessException" />
+  </wsdl:message>
+  <wsdl:portType name="GestionarProspecto">
+    <wsdl:operation name="crearPersonaNatural">
+      <wsdl:input name="crearPersonaNaturalRequest" message="tns:crearPersonaNaturalRequestMsg" />
+      <wsdl:output name="crearPersonaNaturalResponse" message="tns:crearPersonaNaturalResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="crmBusinessException" message="tns:crmBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="crearPersonaJuridica">
+      <wsdl:input name="crearPersonaJuridicaRequest" message="tns:crearPersonaJuridicaRequestMsg" />
+      <wsdl:output name="crearPersonaJuridicaResponse" message="tns:crearPersonaJuridicaResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="crmBusinessException" message="tns:crmBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarPersonaNatural">
+      <wsdl:input name="modificarPersonaNaturalRequest" message="tns:modificarPersonaNaturalRequestMsg" />
+      <wsdl:output name="modificarPersonaNaturalResponse" message="tns:modificarPersonaNaturalResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="crmBusinessException" message="tns:crmBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarPersonaJuridica">
+      <wsdl:input name="modificarPersonaJuridicaRequest" message="tns:modificarPersonaJuridicaRequestMsg" />
+      <wsdl:output name="modificarPersonaJuridicaResponse" message="tns:modificarPersonaJuridicaResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="crmBusinessException" message="tns:crmBusinessExceptionMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

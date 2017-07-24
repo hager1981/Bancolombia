@@ -1,0 +1,16 @@
+C:\Fachade\Fachadas\Clientes\bin\Debug\Clientes.exe.config
+C:\Fachade\Fachadas\Clientes\bin\Debug\Clientes.exe
+C:\Fachade\Fachadas\Clientes\bin\Debug\Clientes.pdb
+C:\Fachade\Fachadas\Clientes\bin\Debug\AppFacadeWS11.dll
+C:\Fachade\Fachadas\Clientes\bin\Debug\AppFacadeWS11.pdb
+C:\Fachade\Fachadas\Clientes\obj\Debug\Clientes.csprojResolveAssemblyReference.cache
+C:\Fachade\Fachadas\Clientes\obj\Debug\Clientes.exe
+C:\Fachade\Fachadas\Clientes\obj\Debug\Clientes.pdb
+C:\Visual Studio\WSFacade\Fachadas\Clientes\bin\Debug\Clientes.exe.config
+C:\Visual Studio\WSFacade\Fachadas\Clientes\bin\Debug\Clientes.exe
+C:\Visual Studio\WSFacade\Fachadas\Clientes\bin\Debug\Clientes.pdb
+C:\Visual Studio\WSFacade\Fachadas\Clientes\bin\Debug\AppFacadeWS11.dll
+C:\Visual Studio\WSFacade\Fachadas\Clientes\bin\Debug\AppFacadeWS11.pdb
+C:\Visual Studio\WSFacade\Fachadas\Clientes\obj\Debug\Clientes.csprojResolveAssemblyReference.cache
+C:\Visual Studio\WSFacade\Fachadas\Clientes\obj\Debug\Clientes.exe
+C:\Visual Studio\WSFacade\Fachadas\Clientes\obj\Debug\Clientes.pdb

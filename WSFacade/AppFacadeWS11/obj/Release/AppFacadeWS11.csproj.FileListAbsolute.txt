@@ -1,0 +1,6 @@
+C:\Fachade\AppFacadeWS11\bin\AppFacadeWS11.dll.config
+C:\Fachade\AppFacadeWS11\bin\AppFacadeWS11.dll
+C:\Fachade\AppFacadeWS11\bin\AppFacadeWS11.pdb
+C:\Fachade\AppFacadeWS11\obj\Release\AppFacadeWS11.dll
+C:\Fachade\AppFacadeWS11\obj\Release\AppFacadeWS11.pdb
+C:\Fachade\AppFacadeWS11\obj\Release\AppFacadeWS11.csprojResolveAssemblyReference.cache

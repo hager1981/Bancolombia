@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\ApoyoBancolombia\FachadaDeploy" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="C:\ApoyoBancolombia\FachadaDeploy" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="FacadeService.asmx" publishTime="03/06/2015 10:13:18" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="03/06/2015 10:11:06" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="03/06/2015 10:11:06" />
+    <file relUrl="Web.config" publishTime="01/23/2017 15:03:25" />
+    <file relUrl="Styles/Site.css" publishTime="03/06/2015 10:11:06" />
+    <file relUrl="XMLFile1.xml" publishTime="04/15/2015 17:58:52" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="03/06/2015 10:11:06" />
+    <file relUrl="bin/AppFacadeWS.pdb" publishTime="01/23/2017 15:03:13" />
+    <file relUrl="bin/AppFacadeWS.dll" publishTime="01/23/2017 15:03:13" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/Enlace/V1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RecuperarCatalogo_BB2" targetNamespace="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/Enlace/V1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0" location="mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=RecuperarCatalogo_BB2_Intf_V1.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="RecuperarCatalogo_BB2_HttpBinding" type="ns:RecuperarCatalogo_BB2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="recuperarCatalogoPorProducto">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0/recuperarCatalogoPorProducto" />
+      <wsdl:input name="recuperarCatalogoPorProductoRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarCatalogoPorProductoRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarCatalogoPorProductoResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarCatalogoPorProductoResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="valorInvalidoEnParametroDependienteBusinessException">
+        <soap:fault use="literal" name="valorInvalidoEnParametroDependienteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="parametroNoEncontradoBusinessException">
+        <soap:fault use="literal" name="parametroNoEncontradoBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarCatalogoPorProceso">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0/recuperarCatalogoPorProceso" />
+      <wsdl:input name="recuperarCatalogoPorProcesoRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarCatalogoPorProcesoRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarCatalogoPorProcesoResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarCatalogoPorProcesoResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="valorInvalidoEnParametroDependienteBusinessException">
+        <soap:fault use="literal" name="valorInvalidoEnParametroDependienteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="parametroNoEncontradoBusinessException">
+        <soap:fault use="literal" name="parametroNoEncontradoBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarCatalogoPorCliente">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0/recuperarCatalogoPorCliente" />
+      <wsdl:input name="recuperarCatalogoPorClienteRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarCatalogoPorClienteRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarCatalogoPorClienteResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarCatalogoPorClienteResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="valorInvalidoEnParametroDependienteBusinessException">
+        <soap:fault use="literal" name="valorInvalidoEnParametroDependienteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="parametroNoEncontradoBusinessException">
+        <soap:fault use="literal" name="parametroNoEncontradoBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecuperarCatalogo_BB2">
+    <wsdl:port name="RecuperarCatalogo_BB2_HttpPort" binding="tns:RecuperarCatalogo_BB2_HttpBinding">
+      <soap:address location="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

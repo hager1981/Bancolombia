@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:bons0="http://grupobancolombia.com/ents/common/GenericException/V2.0" xmlns:tns="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=common-core-GenericException-V2.xsd" namespace="http://grupobancolombia.com/ents/common/GenericException/V2.0" />
+  <xs:element name="recuperarCatalogoPorProducto" type="tns:RecuperarCatalogoPorProducto" />
+  <xs:element name="recuperarCatalogoPorProductoResponse" type="tns:RecuperarCatalogoPorProductoResponse" />
+  <xs:element name="recuperarCatalogoPorProceso" type="tns:RecuperarCatalogoPorProceso" />
+  <xs:element name="recuperarCatalogoPorProcesoResponse" type="tns:RecuperarCatalogoPorProcesoResponse" />
+  <xs:element name="recuperarCatalogoPorCliente" type="tns:RecuperarCatalogoPorCliente" />
+  <xs:element name="recuperarCatalogoPorClienteResponse" type="tns:RecuperarCatalogoPorClienteResponse" />
+  <xs:element name="systemException" type="tns:SystemException" />
+  <xs:element name="parametroNoEncontradoBusinessException" type="tns:ParametroNoEncontradoBusinessException" />
+  <xs:element name="valorInvalidoEnParametroDependienteBusinessException" type="tns:ValorInvalidoEnParametroDependienteBusinessException" />
+  <xs:complexType name="RecuperarCatalogoPorProducto">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="arg0" type="tns:productRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarCatalogoPorProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="return" type="tns:productResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarCatalogoPorProceso">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="arg0" type="tns:processRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarCatalogoPorProcesoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="return" type="tns:processResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarCatalogoPorCliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="arg0" type="tns:clientRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarCatalogoPorClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="return" type="tns:clientResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SystemException">
+    <xs:sequence>
+      <xs:element name="genericException" type="bons0:GenericException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParametroNoEncontradoBusinessException">
+    <xs:sequence>
+      <xs:element name="genericException" type="bons0:GenericException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValorInvalidoEnParametroDependienteBusinessException">
+    <xs:sequence>
+      <xs:element name="genericException" type="bons0:GenericException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clientRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="documentIdType">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="240" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="idNumber" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="origin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="process" type="tns:process" />
+        <xs:element name="product" type="tns:product" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="process">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attributes" type="tns:attributes" />
+      <xs:element minOccurs="1" maxOccurs="1" name="branchCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="processCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="subProcessCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attributes">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attributes" type="tns:attributes" />
+      <xs:element minOccurs="1" maxOccurs="1" name="branchCode" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="productCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clientDocuments" type="tns:clientDocuments" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documents">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conditionForm" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentSubType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentTypeName" type="xs:string" />
+      <xs:element minOccurs="0" name="expiryDays" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="obligatory" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clientDocuments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conditionForm" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentStatus" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentSubType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="documentTypeName" type="xs:string" />
+      <xs:element minOccurs="0" name="expiryDays" type="xs:int" />
+      <xs:element minOccurs="0" name="expiryDate" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="obligatory" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="url" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="error">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="errorCode" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="errorMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="processRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attributes" type="tns:attributes" />
+      <xs:element minOccurs="1" maxOccurs="1" name="branchCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="processCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="subProcessCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="processResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="documents" type="tns:documents" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productRequest">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="attributes" type="tns:attributes" />
+      <xs:element minOccurs="1" maxOccurs="1" name="branchCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="productCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="documents" type="tns:documents" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="01162bb7-b02a-4527-b2e1-c9bbc0180e47" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding.xsd" MetadataType="Schema" ID="b76f99e9-9b02-4412-9096-f1816692b996" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=EntidadesExternas-BDAdquiridas-CodigoGenero-V2.xsd" />
+    <MetadataFile FileName="RecuperarDatosCliente.wsdl" MetadataType="Wsdl" ID="4838acac-a1bc-48e8-ba9f-81c4ab6fe152" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=RecuperarDatosCliente_Intf_V4.0.wsdl" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding1.xsd" MetadataType="Schema" ID="3498e350-ddef-4569-926c-f91fcb7b622a" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=RecuperarDatosCliente_V4.0.xsd" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding2.xsd" MetadataType="Schema" ID="a9882783-f540-426b-9383-a4e6e916b45b" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=common-core-GenericException-V2.xsd" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding3.xsd" MetadataType="Schema" ID="c38a98a0-87da-46fd-b863-795ae655cbfa" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=EntidadesExternas-BDAdquiridas-CodigoPais-V3.xsd" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding4.xsd" MetadataType="Schema" ID="5ff61e8f-9e10-4e5c-bd3a-0f939dbab03e" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding5.xsd" MetadataType="Schema" ID="4cadb652-c78c-475a-b477-3dd3a536051e" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=EntidadesExternas-BDAdquiridas-CodigoIdioma-V2.xsd" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding6.xsd" MetadataType="Schema" ID="52abc371-d86b-411e-9ee6-2a3e514604cb" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=Participante-Demografica-IdentificacionCliente-V2.0.xsd" />
+    <MetadataFile FileName="RecuperarDatosCliente1.wsdl" MetadataType="Wsdl" ID="99c3b1b9-c427-4d06-bbf6-d8fe148fde44" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding7.xsd" MetadataType="Schema" ID="f55149c4-f921-4b22-9feb-f52de7044a11" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=soi-core-CoreExtension-V2.1.xsd" />
+    <MetadataFile FileName="mockRecuperarDatosClienteHttpBinding8.xsd" MetadataType="Schema" ID="7b454411-b6db-48ae-9a6a-d430741c229a" SourceId="1" SourceUrl="http://biz-iis01:8080/ConsultaClienteMDM/mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=Participante-Demografica-EstadoCivil-V3.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

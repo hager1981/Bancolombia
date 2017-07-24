@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/ServiciosApoyo/PrevencionLavadoActivos/ConsultarEstadoClienteListasControl/V1.0" xmlns:mf="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" name="ConsultarEstadoClienteListasControl" targetNamespace="http://grupobancolombia.com/intf/ServiciosApoyo/PrevencionLavadoActivos/ConsultarEstadoClienteListasControl/V1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://grupobancolombia.com/intf/ServiciosApoyo/PrevencionLavadoActivos/ConsultarEstadoClienteListasControl/V1.0">
+      <xsd:include schemaLocation="mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=ConsultarEstadoClienteListasControl_V1.xsd" />
+      <xsd:import schemaLocation="mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" namespace="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarEstadoClienteListasControlRequestMsg">
+    <wsdl:part name="parameters" element="tns:consultarEstadoClienteListasControl" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoClienteListasControlResponseMsg">
+    <wsdl:part name="result" element="tns:consultarEstadoClienteListasControlResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoClienteListasControlControl_faultMsg">
+    <wsdl:part name="parameters" element="tns:businessException" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultarEstadoClienteListasControl">
+    <wsdl:operation name="consultarEstadoClienteListasControl">
+      <wsdl:input name="consultarEstadoClienteListasControlRequest" message="tns:consultarEstadoClienteListasControlRequestMsg" />
+      <wsdl:output name="consultarEstadoClienteListasControlResponse" message="tns:consultarEstadoClienteListasControlResponseMsg" />
+      <wsdl:fault name="consultarEstadoClienteListasControlFault" message="tns:consultarEstadoClienteListasControlControl_faultMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

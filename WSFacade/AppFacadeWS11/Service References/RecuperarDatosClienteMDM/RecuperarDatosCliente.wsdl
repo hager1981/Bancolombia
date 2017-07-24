@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V4.0" xmlns:mf="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" name="RecuperarDatosCliente" targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V4.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V4.0">
+      <xsd:include schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=RecuperarDatosCliente_V4.0.xsd" />
+      <xsd:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" namespace="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="recuperarDatosBasicosClienteRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarDatosBasicosCliente" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosBasicosClienteResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarDatosBasicosClienteResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosPersonalesClienteRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarDatosPersonalesCliente" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosPersonalesClienteResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarDatosPersonalesClienteResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosUbicacionClienteRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarDatosUbicacionCliente" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosUbicacionClienteResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarDatosUbicacionClienteResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosFinancierosClienteRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarDatosFinancierosCliente" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarDatosFinancierosClienteResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarDatosFinancierosClienteResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="systemExceptionMsg">
+    <wsdl:part name="parameters" element="tns:systemException" />
+  </wsdl:message>
+  <wsdl:message name="clienteNoExisteBusinessExceptionMsg">
+    <wsdl:part name="parameters" element="tns:clienteNoExisteBusinessException" />
+  </wsdl:message>
+  <wsdl:portType name="RecuperarDatosCliente">
+    <wsdl:operation name="recuperarDatosBasicosCliente">
+      <wsdl:input name="recuperarDatosBasicosClienteRequest" message="tns:recuperarDatosBasicosClienteRequestMsg" />
+      <wsdl:output name="recuperarDatosBasicosClienteResponse" message="tns:recuperarDatosBasicosClienteResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="clienteNoExisteBusinessException" message="tns:clienteNoExisteBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosPersonalesCliente">
+      <wsdl:input name="recuperarDatosPersonalesClienteRequest" message="tns:recuperarDatosPersonalesClienteRequestMsg" />
+      <wsdl:output name="recuperarDatosPersonalesClienteResponse" message="tns:recuperarDatosPersonalesClienteResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="clienteNoExisteBusinessException" message="tns:clienteNoExisteBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosUbicacionCliente">
+      <wsdl:input name="recuperarDatosUbicacionClienteRequest" message="tns:recuperarDatosUbicacionClienteRequestMsg" />
+      <wsdl:output name="recuperarDatosUbicacionClienteResponse" message="tns:recuperarDatosUbicacionClienteResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="clienteNoExisteBusinessException" message="tns:clienteNoExisteBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosFinancierosCliente">
+      <wsdl:input name="recuperarDatosFinancierosClienteRequest" message="tns:recuperarDatosFinancierosClienteRequestMsg" />
+      <wsdl:output name="recuperarDatosFinancierosClienteResponse" message="tns:recuperarDatosFinancierosClienteResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="clienteNoExisteBusinessException" message="tns:clienteNoExisteBusinessExceptionMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

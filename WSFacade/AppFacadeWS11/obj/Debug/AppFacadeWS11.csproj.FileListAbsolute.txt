@@ -1,0 +1,17 @@
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS11\bin\AppFacadeWS11.dll
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS11\bin\AppFacadeWS11.pdb
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS11\obj\Debug\AppFacadeWS11.dll
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS11\obj\Debug\AppFacadeWS11.pdb
+C:\ApoyoBancolombia\Fachada\AppFacadeWS\AppFacadeWS11\obj\Debug\AppFacadeWS11.csprojResolveAssemblyReference.cache
+C:\Fachade\AppFacadeWS11\bin\AppFacadeWS11.dll.config
+C:\Fachade\AppFacadeWS11\bin\AppFacadeWS11.dll
+C:\Fachade\AppFacadeWS11\bin\AppFacadeWS11.pdb
+C:\Fachade\AppFacadeWS11\obj\Debug\AppFacadeWS11.csprojResolveAssemblyReference.cache
+C:\Fachade\AppFacadeWS11\obj\Debug\AppFacadeWS11.dll
+C:\Fachade\AppFacadeWS11\obj\Debug\AppFacadeWS11.pdb
+C:\Visual Studio\WSFacade\AppFacadeWS11\bin\AppFacadeWS11.dll.config
+C:\Visual Studio\WSFacade\AppFacadeWS11\bin\AppFacadeWS11.dll
+C:\Visual Studio\WSFacade\AppFacadeWS11\bin\AppFacadeWS11.pdb
+C:\Visual Studio\WSFacade\AppFacadeWS11\obj\Debug\AppFacadeWS11.csprojResolveAssemblyReference.cache
+C:\Visual Studio\WSFacade\AppFacadeWS11\obj\Debug\AppFacadeWS11.dll
+C:\Visual Studio\WSFacade\AppFacadeWS11\obj\Debug\AppFacadeWS11.pdb

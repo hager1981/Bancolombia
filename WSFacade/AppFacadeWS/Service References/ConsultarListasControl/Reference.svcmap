@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0acc7e85-bc82-4e2f-9247-33bbff3465ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mockConsultarEstadoClienteListasControl_HttpBinding.xsd" MetadataType="Schema" ID="8a600802-7df8-4725-a486-9440cbaa3c2b" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=Participante-Demografica-CRM-IdentificacionCliente-V1.xsd" />
+    <MetadataFile FileName="ConsultarEstadoClienteListasControl.wsdl" MetadataType="Wsdl" ID="c8b57df4-b162-41d3-ab9c-d307a5521462" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?wsdl" />
+    <MetadataFile FileName="mockConsultarEstadoClienteListasControl_HttpBinding1.xsd" MetadataType="Schema" ID="764de741-e864-48b0-8bd9-95deadb346c3" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=common-core-GenericException-V2.xsd" />
+    <MetadataFile FileName="mockConsultarEstadoClienteListasControl_HttpBinding2.xsd" MetadataType="Schema" ID="2ddfeb14-1b70-4190-a2f3-95f69d768845" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=CumplimientoYRegulatoria-OtrasRegulaciones-EstadoClienteListasControl-V1.xsd" />
+    <MetadataFile FileName="mockConsultarEstadoClienteListasControl_HttpBinding3.xsd" MetadataType="Schema" ID="7c2e6458-5f04-43cc-a628-725738517c4d" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" />
+    <MetadataFile FileName="mockConsultarEstadoClienteListasControl_HttpBinding4.xsd" MetadataType="Schema" ID="4156d4ce-da46-4075-bb51-b7f68a91eae1" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=ConsultarEstadoClienteListasControl_V1.xsd" />
+    <MetadataFile FileName="mockConsultarEstadoClienteListasControl_HttpBinding5.xsd" MetadataType="Schema" ID="a5b9dd11-8e7d-44ba-ab11-80ca323973c4" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=soi-core-CoreExtension-V2.1.xsd" />
+    <MetadataFile FileName="ConsultarEstadoClienteListasControl1.wsdl" MetadataType="Wsdl" ID="a4883b75-3802-4cb5-9294-404deab2c3a3" SourceId="1" SourceUrl="http://biz-appgo02:8081/ListasControl/mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=ConsultarEstadoClienteListasControl_Intf_V1.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

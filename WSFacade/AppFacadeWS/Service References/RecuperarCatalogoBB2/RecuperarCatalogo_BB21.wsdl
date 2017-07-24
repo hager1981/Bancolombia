@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0" xmlns:mf="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" name="RecuperarCatalogo_BB2" targetNamespace="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://grupobancolombia.com/intf/ServiciosAdministrativos/ServiciosdeInformacionDocumental/RecuperarCatalogo_BB2/V1.0">
+      <xsd:include schemaLocation="mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=RecuperarCatalogo_BB2_V1.xsd" />
+      <xsd:import schemaLocation="mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" namespace="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="recuperarCatalogoPorProductoRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarCatalogoPorProducto" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarCatalogoPorProductoResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarCatalogoPorProductoResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarCatalogoPorProcesoRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarCatalogoPorProceso" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarCatalogoPorProcesoResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarCatalogoPorProcesoResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarCatalogoPorClienteRequestMsg">
+    <wsdl:part name="parameters" element="tns:recuperarCatalogoPorCliente" />
+    <wsdl:part name="requestHeader" element="mf:requestHeader" />
+  </wsdl:message>
+  <wsdl:message name="recuperarCatalogoPorClienteResponseMsg">
+    <wsdl:part name="result" element="tns:recuperarCatalogoPorClienteResponse" />
+    <wsdl:part name="responseHeader" element="mf:responseHeader" />
+  </wsdl:message>
+  <wsdl:message name="systemExceptionMsg">
+    <wsdl:part name="parameters" element="tns:systemException" />
+  </wsdl:message>
+  <wsdl:message name="parametroNoEncontradoBusinessExceptionMsg">
+    <wsdl:part name="parameters" element="tns:parametroNoEncontradoBusinessException" />
+  </wsdl:message>
+  <wsdl:message name="valorInvalidoEnParametroDependienteBusinessExceptionMsg">
+    <wsdl:part name="parameters" element="tns:valorInvalidoEnParametroDependienteBusinessException" />
+  </wsdl:message>
+  <wsdl:portType name="RecuperarCatalogo_BB2">
+    <wsdl:operation name="recuperarCatalogoPorProducto">
+      <wsdl:input name="recuperarCatalogoPorProductoRequest" message="tns:recuperarCatalogoPorProductoRequestMsg" />
+      <wsdl:output name="recuperarCatalogoPorProductoResponse" message="tns:recuperarCatalogoPorProductoResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="parametroNoEncontradoBusinessException" message="tns:parametroNoEncontradoBusinessExceptionMsg" />
+      <wsdl:fault name="valorInvalidoEnParametroDependienteBusinessException" message="tns:valorInvalidoEnParametroDependienteBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarCatalogoPorProceso">
+      <wsdl:input name="recuperarCatalogoPorProcesoRequest" message="tns:recuperarCatalogoPorProcesoRequestMsg" />
+      <wsdl:output name="recuperarCatalogoPorProcesoResponse" message="tns:recuperarCatalogoPorProcesoResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="parametroNoEncontradoBusinessException" message="tns:parametroNoEncontradoBusinessExceptionMsg" />
+      <wsdl:fault name="valorInvalidoEnParametroDependienteBusinessException" message="tns:valorInvalidoEnParametroDependienteBusinessExceptionMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarCatalogoPorCliente">
+      <wsdl:input name="recuperarCatalogoPorClienteRequest" message="tns:recuperarCatalogoPorClienteRequestMsg" />
+      <wsdl:output name="recuperarCatalogoPorClienteResponse" message="tns:recuperarCatalogoPorClienteResponseMsg" />
+      <wsdl:fault name="systemException" message="tns:systemExceptionMsg" />
+      <wsdl:fault name="parametroNoEncontradoBusinessException" message="tns:parametroNoEncontradoBusinessExceptionMsg" />
+      <wsdl:fault name="valorInvalidoEnParametroDependienteBusinessException" message="tns:valorInvalidoEnParametroDependienteBusinessExceptionMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

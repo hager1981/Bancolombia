@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:bons1="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoIdioma/V2.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoIdioma/V2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="CodigoIdioma">
+    <xsd:annotation>
+      <xsd:documentation>Fecha [ 2010-11-14 ]
+Analista [ jnanez@co.ibm.com ]
+Estado [ Creación ]
+Descripción [ Definición de la entidad de negocio, se sustenta en la 	normatividad ISO 639, permitiendo recibir carácteres alfabéticos en mayúsculas y en 				minúsculas ]</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element minOccurs="1" name="codigoISO6391">
+          <xsd:annotation>
+            <xsd:documentation>Dominio [ ([a-z]|[A-Z])([a-z]|[A-Z]) ]
+Descripcion [ ISO 639-1 ]</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:whiteSpace value="collapse" />
+              <xsd:length value="2" />
+              <xsd:pattern value="([a-z]|[A-Z])([a-z]|[A-Z])" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="codigoISO6392">
+          <xsd:annotation>
+            <xsd:documentation>Dominio [ ((a-z)|(A-Z))((a-z)|(A-Z-))((a-z)|(A-Z)) ]
+Descripcion [ ISO 639-2 ]</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="3" />
+              <xsd:whiteSpace value="collapse" />
+              <xsd:pattern value="([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="codigoISO6393">
+          <xsd:annotation>
+            <xsd:documentation>Dominio [ ([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z]) ]
+Descripcion [ ISO 639-3 ]</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="3" />
+              <xsd:whiteSpace value="collapse" />
+              <xsd:pattern value="([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="codigoISO6394">
+          <xsd:annotation>
+            <xsd:documentation>Dominio [ ([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z]) ]
+Descripcion [ ISO 639-4 ]</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="3" />
+              <xsd:whiteSpace value="collapse" />
+              <xsd:pattern value="([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="codigoISO6395">
+          <xsd:annotation>
+            <xsd:documentation>Dominio [ ([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z]) ]
+Descripcion [ ISO 639-5 ]</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="3" />
+              <xsd:whiteSpace value="collapse" />
+              <xsd:pattern value="([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element minOccurs="1" name="codigoISO6396">
+          <xsd:annotation>
+            <xsd:documentation>Dominio [ ([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z]) ]
+Descripcion [ ISO 639-6 ]</xsd:documentation>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="3" />
+              <xsd:whiteSpace value="collapse" />
+              <xsd:pattern value="([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])([a-z]|[A-Z])" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/Enlace/V3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RecuperarDatosCliente" targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/Enlace/V3.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0" location="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=RecuperarDatosCliente_Intf_V3.0.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="RecuperarDatosClienteHttpBinding" type="ns:RecuperarDatosCliente">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="recuperarDatosBasicosCliente">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0/recuperarDatosBasicosCliente" />
+      <wsdl:input name="recuperarDatosBasicosClienteRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarDatosBasicosClienteRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarDatosBasicosClienteResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarDatosBasicosClienteResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="clienteNoExisteBusinessException">
+        <soap:fault use="literal" name="clienteNoExisteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosPersonalesCliente">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0/recuperarDatosPersonalesCliente" />
+      <wsdl:input name="recuperarDatosPersonalesClienteRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarDatosPersonalesClienteRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarDatosPersonalesClienteResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarDatosPersonalesClienteResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="clienteNoExisteBusinessException">
+        <soap:fault use="literal" name="clienteNoExisteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosUbicacionCliente">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0/recuperarDatosUbicacionCliente" />
+      <wsdl:input name="recuperarDatosUbicacionClienteRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarDatosUbicacionClienteRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarDatosUbicacionClienteResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarDatosUbicacionClienteResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="clienteNoExisteBusinessException">
+        <soap:fault use="literal" name="clienteNoExisteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosFinancierosCliente">
+      <soap:operation soapAction="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0/recuperarDatosFinancierosCliente" />
+      <wsdl:input name="recuperarDatosFinancierosClienteRequest">
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="ns:recuperarDatosFinancierosClienteRequestMsg" part="requestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="recuperarDatosFinancierosClienteResponse">
+        <soap:body use="literal" parts="result" />
+        <soap:header message="ns:recuperarDatosFinancierosClienteResponseMsg" part="responseHeader" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="clienteNoExisteBusinessException">
+        <soap:fault use="literal" name="clienteNoExisteBusinessException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="systemException">
+        <soap:fault use="literal" name="systemException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecuperarDatosCliente">
+    <wsdl:port name="RecuperarDatosClienteHttpPort" binding="tns:RecuperarDatosClienteHttpBinding">
+      <soap:address location="http://biz-appgo02:8081/HUB_CRM/mockRecuperarDatosClienteHttpBinding" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:bons4="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoPais/V2.0" xmlns:bons1="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoIdioma/V2.0" xmlns:tns="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0" xmlns:bons2="http://grupobancolombia.com/ents/Participante/Demografica/IdentificacionCliente/V1.0" xmlns:bons3="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoGenero/V2.0" xmlns:bons5="http://grupobancolombia.com/ents/Participante/Demografica/EstadoCivil/V3.0" xmlns:bons0="http://grupobancolombia.com/ents/common/GenericException/V2.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Clientes/GestionClientes/RecuperarDatosCliente/V3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=EntidadesExternas-BDAdquiridas-CodigoPais-V2.xsd" namespace="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoPais/V2.0" />
+  <xs:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=Participante-Demografica-EstadoCivil-V3.xsd" namespace="http://grupobancolombia.com/ents/Participante/Demografica/EstadoCivil/V3.0" />
+  <xs:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=EntidadesExternas-BDAdquiridas-CodigoGenero-V2.xsd" namespace="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoGenero/V2.0" />
+  <xs:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=EntidadesExternas-BDAdquiridas-CodigoIdioma-V2.xsd" namespace="http://grupobancolombia.com/ents/EntidadesExternas/BDAdquiridas/CodigoIdioma/V2.0" />
+  <xs:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=Participante-Demografica-IdentificacionCliente-V1.xsd" namespace="http://grupobancolombia.com/ents/Participante/Demografica/IdentificacionCliente/V1.0" />
+  <xs:import schemaLocation="mockRecuperarDatosClienteHttpBinding?WSDL&amp;interface=RecuperarDatosClienteHttpBinding&amp;part=common-core-GenericException-V2.xsd" namespace="http://grupobancolombia.com/ents/common/GenericException/V2.0" />
+  <xs:element name="recuperarDatosBasicosCliente" type="tns:RecuperarDatosBasicosCliente" />
+  <xs:element name="recuperarDatosBasicosClienteResponse" type="tns:RecuperarDatosBasicosClienteResponse" />
+  <xs:element name="recuperarDatosPersonalesCliente" type="tns:RecuperarDatosPersonalesCliente" />
+  <xs:element name="recuperarDatosPersonalesClienteResponse" type="tns:RecuperarDatosPersonalesClienteResponse" />
+  <xs:element name="recuperarDatosUbicacionCliente" type="tns:RecuperarDatosUbicacionCliente" />
+  <xs:element name="recuperarDatosUbicacionClienteResponse" type="tns:RecuperarDatosUbicacionClienteResponse" />
+  <xs:element name="recuperarDatosFinancierosCliente" type="tns:RecuperarDatosFinancierosCliente" />
+  <xs:element name="recuperarDatosFinancierosClienteResponse" type="tns:RecuperarDatosFinancierosClienteResponse" />
+  <xs:element name="clienteNoExisteBusinessException" type="tns:ClienteNoExisteBusinessException" />
+  <xs:element name="systemException" type="tns:SystemException" />
+  <xs:complexType name="RecuperarDatosBasicosCliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="identificacionCliente" type="bons2:IdentificacionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosBasicosClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="cliente" type="tns:Cliente" />
+      <xs:element minOccurs="0" name="identificadorClienteBP">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoCIIU">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoSubCIIU">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="7" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoSegmento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoSubSegmento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="gerenteMonedaExtranjera" type="tns:GerenteMonedaExtranjera" />
+      <xs:element minOccurs="0" name="gerenteComercial" type="tns:GerenteComercial" />
+      <xs:element minOccurs="0" name="codigoRol">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="6" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="estadoCliente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="estadoVinculacion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="fechaEstadoVinculacion" type="xs:date" />
+      <xs:element minOccurs="0" name="fechaCambioEstado" type="xs:date" />
+      <xs:element minOccurs="0" name="codigoRegion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoOficina">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="8" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoSector">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoSubSector">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="informacionExpedicionIdentificacion" type="tns:InformacionExpedicionIdentificacion" />
+      <xs:element minOccurs="0" name="informacionNacimientoCliente" type="tns:InformacionNacimientoPersona" />
+      <xs:element minOccurs="0" name="ocupacion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="esIntermediarioMercadoCambiario" type="xs:boolean" />
+      <xs:element minOccurs="0" name="esVigiladoPorSuperfinanciera" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaUltimaActualizacion" type="xs:date" />
+      <xs:element minOccurs="0" name="esClienteDeTesoreria" type="xs:boolean" />
+      <xs:element minOccurs="0" name="usuarioRedTrader">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoGrupoPersona">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosPersonalesCliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="identificacionCliente" type="bons2:IdentificacionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosPersonalesClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calificacionRiesgoInterno ">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="indicadorAdministracionCreditosEspeciales">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="informacionRepresentanteLegal" type="tns:InformacionRepresentanteLegal" />
+      <xs:element minOccurs="0" name="nivelAcademico">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="empresaDondeLabora">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="35" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="porcentajeParticipacionComoAccionista">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="esPEP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigoEstadoListasDeControl">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoIdioma" type="bons1:CodigoIdioma" />
+      <xs:element minOccurs="0" name="esMenorDeEdad" type="xs:boolean" />
+      <xs:element minOccurs="0" name="genero" type="bons3:CodigoGenero" />
+      <xs:element minOccurs="0" name="codigoGrupoEconomico">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="35" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="tratamientoCliente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoEstadoCivil" type="bons5:EstadoCivil" />
+      <xs:element minOccurs="0" name="codigoPaisNacionalidad" type="bons4:CodigoPais" />
+      <xs:element minOccurs="0" name="informacionContactoCliente" type="tns:InformacionContactoCliente" />
+      <xs:element minOccurs="0" name="numeroHijos">
+        <xs:simpleType>
+          <xs:restriction base="xs:int" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="informacionGerenciador" type="tns:InformacionGerenciador" />
+      <xs:element minOccurs="0" name="codigoAutorizacionRecibirInformacion" type="tns:CodigoAutorizacionRecibirInformacion" />
+      <xs:element minOccurs="0" name="correoElectronico" type="tns:CorreoElectronico" />
+      <xs:element minOccurs="0" name="codigoConsultaExtractos">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="actividadEconomica">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="calificacionInterna">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="informacionOrigenRecursos" type="tns:InformacionOrigenRecursos" />
+      <xs:element minOccurs="0" name="estadoVinculacion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosUbicacionCliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="identificacionCliente" type="bons2:IdentificacionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosUbicacionClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="informacionUbicacionCliente" type="tns:InformacionUbicacionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionUbicacionCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoDireccionFuente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoTipoDireccionFuente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="direccionPrincipal">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="60" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoCiudad">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoDepartamento">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoPais" type="bons4:CodigoPais" />
+      <xs:element minOccurs="0" name="telefonoFijo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="celular">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="fax">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="correoElectronico">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="241" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="paginaWeb">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2048" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoPostal">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="barrioDireccionPrincipal">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoCorrespondencia">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosFinancierosCliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="identificacionCliente" type="bons2:IdentificacionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperarDatosFinancierosClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="esDeclarante">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="IngresosMensuales">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="OtrosIngresosMensuales">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalIngresosMensuales">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalEgresosMensuales">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalActivos">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalPasivos">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalPatrimonio">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="FechaVentasAnual" type="xs:date" />
+      <xs:element minOccurs="0" name="VolVentasReales">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:whiteSpace value="collapse" />
+            <xs:fractionDigits value="2" />
+            <xs:totalDigits value="13" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="autorretenedoresOtrosIngresos">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="claseContribuyente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="tipoContribuyente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CodigoTipoMoneda">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="numeroEmpleados">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="7" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="regimenIVA">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="esAgenteRetenedor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="reporteCostosTotales">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element minOccurs="1" name="personaNatural" type="tns:PersonaNatural" />
+        <xs:element minOccurs="1" name="personaJuridica" type="tns:PersonaJuridica" />
+      </xs:choice>
+      <xs:element minOccurs="1" name="tipoPersona">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaJuridica">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="razonSocial">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="160" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaNatural">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="nombreLargoCliente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="160" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="nombreCortoCliente">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="80" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" name="nombreCliente" type="tns:NombreCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionExpedicionIdentificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaExpedicion" type="xs:date" />
+      <xs:element minOccurs="0" name="codigoCiudadExpedicion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoPaisExpedicion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NombreCliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="primerNombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="segundoNombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="1" name="primerApellido">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="segundoApellido">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GerenteMonedaExtranjera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreLargo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="160" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="numeroDocumentoIdentidad">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="60" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GerenteComercial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreLargo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="160" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionNacimientoPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:date" />
+      <xs:element minOccurs="0" name="codigoCiudad">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="codigoPais">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionRepresentanteLegal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="80" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="numeroTelefono">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionContactoCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="80" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="numeroTelefono">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="30" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionGerenciador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="80" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="usuarioRed">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CodigoAutorizacionRecibirInformacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="viaCorreoElectronico" type="xs:boolean" />
+      <xs:element minOccurs="0" name="viaMensajeTexto" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CorreoElectronico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="personal">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="241" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="laboral">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="241" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformacionOrigenRecursos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoPais" type="bons4:CodigoPais" />
+      <xs:element minOccurs="0" name="codigoCiudad">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClienteNoExisteBusinessException">
+    <xs:sequence>
+      <xs:element name="genericException" type="bons0:GenericException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SystemException">
+    <xs:sequence>
+      <xs:element name="genericException" type="bons0:GenericException" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

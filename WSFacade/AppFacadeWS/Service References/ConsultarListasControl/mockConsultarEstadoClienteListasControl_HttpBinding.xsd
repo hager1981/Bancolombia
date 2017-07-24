@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:bons0="http://grupobancolombia.com/ents/Participante/Demografica/CRM/IdentificacionCliente/V1.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/ents/Participante/Demografica/CRM/IdentificacionCliente/V1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="IdentificacionCliente">
+    <xsd:annotation>
+      <xsd:documentation>DV.1.0
+Fecha 			[ 2010-06-01 ]
+Analista 		[ Reinaldo Otalvaro/Colombia/Contr/IBM@IBMCO ]
+Arquitecto		[  ]
+Estado 			[ Creación ]
+Código Requerimiento  [  ]
+Descripción 		[ Entidad que permite identificar al cliente, utilizando el tipo y número de documento, y el nombre]</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="tipoDocumento">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1" />
+            <xsd:maxLength value="6" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="1" name="numeroDocumento">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1" />
+            <xsd:maxLength value="60" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="nombreCompleto">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:minLength value="0" />
+            <xsd:maxLength value="60" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

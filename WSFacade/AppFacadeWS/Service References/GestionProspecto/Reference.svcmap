@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f3bc1bb-ec30-4b35-9382-74c4d41f8b96" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mockGestionarProspectoHttpBinding.xsd" MetadataType="Schema" ID="0b8caa85-94a7-453b-b320-053188d7f212" SourceId="1" SourceUrl="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=soi-core-CoreExtension-V2.1.xsd" />
+    <MetadataFile FileName="GestionarProspecto.wsdl" MetadataType="Wsdl" ID="663735fe-3db0-40a9-9b18-39160b0ffa45" SourceId="1" SourceUrl="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?wsdl" />
+    <MetadataFile FileName="GestionarProspecto1.wsdl" MetadataType="Wsdl" ID="0a6c9300-8a3e-4ff5-a7a7-4ae83047f224" SourceId="1" SourceUrl="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=GestionarProspecto_Intf_V1.1.wsdl" />
+    <MetadataFile FileName="mockGestionarProspectoHttpBinding1.xsd" MetadataType="Schema" ID="9a173d83-def3-483d-9658-1d62d9c8cb44" SourceId="1" SourceUrl="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=GestionarProspecto_V1.1.xsd" />
+    <MetadataFile FileName="mockGestionarProspectoHttpBinding2.xsd" MetadataType="Schema" ID="7def678f-072a-45ff-a093-208732a4d011" SourceId="1" SourceUrl="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" />
+    <MetadataFile FileName="mockGestionarProspectoHttpBinding3.xsd" MetadataType="Schema" ID="ed398591-b692-4b81-a003-adcdcd794370" SourceId="1" SourceUrl="http://biz-appgo02:8081/GestionProspecto/mockGestionarProspectoHttpBinding?WSDL&amp;interface=GestionarProspectoHttpBinding&amp;part=common-core-GenericException-V2.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

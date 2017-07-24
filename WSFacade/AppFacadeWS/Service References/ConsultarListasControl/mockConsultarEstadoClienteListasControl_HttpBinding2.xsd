@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:bons1="http://grupobancolombia.com/ents/Participante/Demografica/CRM/IdentificacionCliente/V1.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/ents/CumplimientoYRegulatoria/OtrasRegulaciones/EstadoClienteListasControl/V1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=Participante-Demografica-CRM-IdentificacionCliente-V1.xsd" namespace="http://grupobancolombia.com/ents/Participante/Demografica/CRM/IdentificacionCliente/V1.0" />
+  <xsd:complexType name="EstadoClienteListasControl">
+    <xsd:annotation>
+      <xsd:documentation>DV.1.0
+Fecha 			[ 2010-06-01 ]
+Analista 		[ Reinaldo Otalvaro/Colombia/Contr/IBM@IBMCO ]
+Arquitecto		[  ]
+Estado 			[ Creación ]
+Código Requerimiento  [  ]
+Descripción 		[ Entidad que contiene la información como respuesta al estado del cliente en listas de control ]</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="identidadCliente" type="bons1:IdentificacionCliente" />
+      <xsd:element minOccurs="0" name="tipoEstado" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="mensajeEstado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

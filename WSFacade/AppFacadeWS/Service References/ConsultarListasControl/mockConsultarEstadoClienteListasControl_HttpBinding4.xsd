@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://grupobancolombia.com/intf/ServiciosApoyo/PrevencionLavadoActivos/ConsultarEstadoClienteListasControl/V1.0" xmlns:bons0="http://grupobancolombia.com/ents/CumplimientoYRegulatoria/OtrasRegulaciones/EstadoClienteListasControl/V1.0" xmlns:bons1="http://grupobancolombia.com/ents/Participante/Demografica/CRM/IdentificacionCliente/V1.0" xmlns:ce="http://grupobancolombia.com/ents/common/GenericException/V2.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/ServiciosApoyo/PrevencionLavadoActivos/ConsultarEstadoClienteListasControl/V1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=common-core-GenericException-V2.xsd" namespace="http://grupobancolombia.com/ents/common/GenericException/V2.0" />
+  <xs:import schemaLocation="mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=CumplimientoYRegulatoria-OtrasRegulaciones-EstadoClienteListasControl-V1.xsd" namespace="http://grupobancolombia.com/ents/CumplimientoYRegulatoria/OtrasRegulaciones/EstadoClienteListasControl/V1.0" />
+  <xs:import schemaLocation="mockConsultarEstadoClienteListasControl_HttpBinding?WSDL&amp;interface=ConsultarEstadoClienteListasControl_HttpBinding&amp;part=Participante-Demografica-CRM-IdentificacionCliente-V1.xsd" namespace="http://grupobancolombia.com/ents/Participante/Demografica/CRM/IdentificacionCliente/V1.0" />
+  <xs:element name="consultarEstadoClienteListasControl" type="tns:ConsultarEstadoClienteListasControl" />
+  <xs:element name="consultarEstadoClienteListasControlResponse" type="tns:ConsultarEstadoClienteListasControlResponse" />
+  <xs:element name="businessException" type="ce:GenericException" />
+  <xs:element name="estadoClienteListasControlInvalidoException" type="tns:EstadoClienteListasControlInvalidoException" />
+  <xs:complexType name="ConsultarEstadoClienteListasControl">
+    <xs:annotation>
+      <xs:documentation>DV.1.0
+Fecha 			[ 2010-06-01 ]
+Analista 		[ Reinaldo Otalvaro/Colombia/Contr/IBM@IBMCO ]
+Arquitecto		[  ]
+Estado 			[ Creación ]
+Código Requerimiento  [ FIN0041 ]
+Descripción 		[  ]
+Mensaje		[ request ]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="identidadCliente" type="bons1:IdentificacionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConsultarEstadoClienteListasControlResponse">
+    <xs:annotation>
+      <xs:documentation>DV.1.0
+Fecha 			[ 2010-06-01 ]
+Analista 		[ Reinaldo Otalvaro/Colombia/Contr/IBM@IBMCO ]
+Arquitecto		[  ]
+Estado 			[ Creación ]
+Código Requerimiento  [ FIN0041 ]
+Descripción 		[  ]
+Mensaje		[ reponse ]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="estadoClienteListasControl" type="bons0:EstadoClienteListasControl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EstadoClienteListasControlInvalidoException">
+    <xs:annotation>
+      <xs:documentation>DV.1.0
+Fecha 			[ 2010-06-01 ]
+Analista 		[ Reinaldo Otalvaro/Colombia/Contr/IBM@IBMCO ]
+Arquitecto		[  ]
+Estado 			[ Creación ]
+Código Requerimiento  [ FIN0041 ]
+Descripción 		[  ]
+Mensaje		[ exception ]</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="estadoClienteListasControlInvalidoException" type="ce:GenericException">
+        <xs:annotation>
+          <xs:documentation>DV.1.0
+Fecha 			[ 2011-02-07 ]
+Analista 		[ Jose Francisco Nanez/Colombia/Contr/IBM ]
+Arquitecto		[  ]
+Estado 			[ Información ]
+Código Requerimiento  [  ]
+Descripción 		[ Debe modificarse el nombre del elemento en la siguiente versión, a "genericException", mejorando el manejo de las excepciones ]</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

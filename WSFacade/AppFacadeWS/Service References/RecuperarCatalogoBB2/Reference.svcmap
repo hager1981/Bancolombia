@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5ecca402-5ed7-4e28-af04-2c9ad4f831e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RecuperarCatalogo_BB2.wsdl" MetadataType="Wsdl" ID="2b275f6c-e0f1-46d9-9726-f4fc37cfc7a8" SourceId="1" SourceUrl="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?wsdl" />
+    <MetadataFile FileName="mockRecuperarCatalogo_BB2_HttpBinding.xsd" MetadataType="Schema" ID="85677ae8-342e-4ed6-bda5-901117316ea4" SourceId="1" SourceUrl="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=RecuperarCatalogo_BB2_V1.xsd" />
+    <MetadataFile FileName="mockRecuperarCatalogo_BB2_HttpBinding1.xsd" MetadataType="Schema" ID="dd3b7e48-dc18-40a9-955a-73c41a671575" SourceId="1" SourceUrl="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=common-core-GenericException-V2.xsd" />
+    <MetadataFile FileName="RecuperarCatalogo_BB21.wsdl" MetadataType="Wsdl" ID="04dbe0ea-2104-4652-ba50-e6635a08414f" SourceId="1" SourceUrl="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=RecuperarCatalogo_BB2_Intf_V1.wsdl" />
+    <MetadataFile FileName="mockRecuperarCatalogo_BB2_HttpBinding2.xsd" MetadataType="Schema" ID="aeaf6c84-7594-4f8a-b4d2-bfbed10f0141" SourceId="1" SourceUrl="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=soi-core-MessageFormat-V2.1.xsd" />
+    <MetadataFile FileName="mockRecuperarCatalogo_BB2_HttpBinding3.xsd" MetadataType="Schema" ID="dfd0e8da-758f-41a3-9a86-22492354d01a" SourceId="1" SourceUrl="http://biz-appgo02:8081/BB2/mockRecuperarCatalogo_BB2_HttpBinding?WSDL&amp;interface=RecuperarCatalogo_BB2_HttpBinding&amp;part=soi-core-CoreExtension-V2.1.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
